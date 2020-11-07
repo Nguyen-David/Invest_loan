@@ -1,0 +1,23 @@
+{
+  "name": "Test Computools",
+  "version": "1.0.0",
+  "description": "Test program for give investors a way to invest in a loan",
+  "authors": [
+    {
+      "name": "nguyen.devid",
+      "email": "devid.nguyen21@gmail.com"
+    }
+  ],
+  "autoload": {
+      "classmap": [
+        "app/",
+        "config/"
+      ],
+    "psr-4": {
+
+    }
+  },
+  "require": {
+    "psr/container": "^1.0"
+  }
+}
