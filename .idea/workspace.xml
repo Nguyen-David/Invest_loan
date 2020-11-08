@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="" />
+    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/storage/Storage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/StorageInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/repositories/DomainRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/repositories/DomainRepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/repositories/LoanRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/repositories/LoanRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Loan/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Loan/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Loan/LoanInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Loan/LoanInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/container.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/container.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +78,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.MainTest.testApp">
+    <configuration name="MainTest.testApp" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MainTest" file="$PROJECT_DIR$/tests/MainTest.php" method="testApp" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MainTest.testApp" />
         <item itemvalue="PHP Script.index.php" />
       </list>
     </recent_temporary>
@@ -75,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604741813529</updated>
-      <workItem from="1604741814652" duration="22204000" />
+      <workItem from="1604741814652" duration="41984000" />
     </task>
     <servers />
   </component>

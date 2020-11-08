@@ -32,9 +32,10 @@ interface LoanInterface {
     public function setEndDate($endDate);
 
     /**
-     * @return array
+     * @param $name
+     * @return TrancheInterface
      */
-    public function getTranche();
+    public function getTranche($name);
 
     /**
      * @param TrancheInterface $tranche

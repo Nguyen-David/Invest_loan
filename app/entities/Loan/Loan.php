@@ -3,13 +3,14 @@
 
 namespace app\entities\Loan;
 
+use app\entities\DomainEntity;
 use app\entities\Tranche\TrancheInterface;
 
 /**
  * Class Loan
  * @package app\entities\LoanInterface
  */
-class Loan implements LoanInterface
+class Loan extends DomainEntity implements LoanInterface
 {
     /**
      * @var string
@@ -25,6 +26,13 @@ class Loan implements LoanInterface
      * @var array
      */
     private $tranches;
+
+    public function __construct($startDate, $endDate)
+    {
+        $this->startDate = $startDate;
+        $this->endDate = $endDate;
+    }
+
     /**
      * @return string;
      */
@@ -60,11 +68,12 @@ class Loan implements LoanInterface
     }
 
     /**
-     * @return array
+     * @param $name
+     * @return TrancheInterface
      */
-    public function getTranche()
+    public function getTranche($name)
     {
-        return $this->tranches;
+        return $this->tranches[$name];
     }
 
     /**
@@ -72,7 +81,7 @@ class Loan implements LoanInterface
      */
     public function setTranche(TrancheInterface $tranche)
     {
-        $this->tranches[] = $tranche;
+        $this->tranches[$tranche->getName()] = $tranche;
     }
 
 

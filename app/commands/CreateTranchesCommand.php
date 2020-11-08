@@ -4,8 +4,8 @@
 namespace app\commands;
 
 
-use app\entities\Loan\LoanInterface;
 use app\entities\Tranche\Tranche;
+use app\storage\repositories\LoanRepositoryInterface;
 
 /**
  * Class CreateTranchesCommand
@@ -15,17 +15,17 @@ class CreateTranchesCommand implements CommandInterface
 {
 
     /**
-     * @var LoanInterface
+     * @var LoanRepositoryInterface
      */
-    private $loan;
+    private $loanRepository;
 
     /**
      * CreateTranchesCommand constructor.
-     * @param LoanInterface $loan
+     * @param LoanRepositoryInterface $loan
      */
-    public function __construct(LoanInterface $loan)
+    public function __construct(LoanRepositoryInterface $loan)
     {
-        $this->loan = $loan;
+        $this->loanRepository = $loan;
     }
 
     /**
@@ -34,8 +34,10 @@ class CreateTranchesCommand implements CommandInterface
      */
     public function run(array $parameters)
     {
-        $this->loan->setTranche(new Tranche($parameters['a']['monthPercentage'],$parameters['a']['maxInvest']));
-        $this->loan->setTranche(new Tranche($parameters['b']['monthPercentage'],$parameters['b']['maxInvest']));
-
+        $loan = $this->loanRepository->find($parameters['loanId']);
+        foreach ($parameters['tranches'] as $name => $parameter){
+            $loan->setTranche(new Tranche($name,$parameter['monthPercentage'],$parameter['maxInvest']));
+        }
+        $this->loanRepository->save($loan);
     }
 }

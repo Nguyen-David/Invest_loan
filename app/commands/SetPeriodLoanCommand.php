@@ -4,7 +4,9 @@
 namespace app\commands;
 
 
+use app\entities\Loan\Loan;
 use app\entities\Loan\LoanInterface;
+use app\storage\repositories\LoanRepositoryInterface;
 
 /**
  * Class SetPeriodLoanCommand
@@ -13,13 +15,17 @@ use app\entities\Loan\LoanInterface;
 class SetPeriodLoanCommand implements CommandInterface
 {
     /**
-     * @var LoanInterface
+     * @var LoanRepositoryInterface
      */
-    private $loan;
+    private $loanRepository;
 
-    public function __construct(LoanInterface $loan)
+    /**
+     * SetPeriodLoanCommand constructor.
+     * @param LoanRepositoryInterface $loanRepository
+     */
+    public function __construct(LoanRepositoryInterface $loanRepository)
     {
-        $this->loan = $loan;
+        $this->loanRepository = $loanRepository;
     }
 
     /**
@@ -28,7 +34,8 @@ class SetPeriodLoanCommand implements CommandInterface
      */
     public function run(array $parameters)
     {
-        $this->loan->setStartDate($parameters['startLoan']);
-        $this->loan->setEndDate($parameters['endLoan']);
+        $loan = new Loan($parameters['startLoan'], $parameters['endLoan']);
+        $this->loanRepository->save($loan);
+        return $loan->getId();
     }
 }
