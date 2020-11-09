@@ -70,6 +70,7 @@ class ComposerStaticInit16059b48fb5263a74f862ad2f51be71a
     );
 
     public static $classMap = array (
+        'InvestValidator' => __DIR__ . '/../..' . '/app/validators/InvestValidator.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
@@ -667,12 +668,17 @@ class ComposerStaticInit16059b48fb5263a74f862ad2f51be71a
         'app\\entities\\Tranche\\TrancheInterface' => __DIR__ . '/../..' . '/app/entities/Tranche/TrancheInterface.php',
         'app\\main\\Application' => __DIR__ . '/../..' . '/app/main/Application.php',
         'app\\main\\ApplicationInterface' => __DIR__ . '/../..' . '/app/main/ApplicationInterface.php',
+        'app\\services\\InvestCalculateService\\InvestCalculateServiceInterface' => __DIR__ . '/../..' . '/app/services/InvestCalculateService/InvestCalculateServiceInterface.php',
+        'app\\services\\InvestCalculateService\\InvestCalculationService' => __DIR__ . '/../..' . '/app/services/InvestCalculateService/InvestCalculationService.php',
+        'app\\services\\InvestService\\InvestService' => __DIR__ . '/../..' . '/app/services/InvestService/InvestService.php',
+        'app\\services\\InvestService\\InvestServiceInterface' => __DIR__ . '/../..' . '/app/services/InvestService/InvestServiceInterface.php',
         'app\\storage\\Storage' => __DIR__ . '/../..' . '/app/storage/Storage.php',
         'app\\storage\\StorageInterface' => __DIR__ . '/../..' . '/app/storage/StorageInterface.php',
         'app\\storage\\repositories\\DomainRepository' => __DIR__ . '/../..' . '/app/storage/repositories/DomainRepository.php',
         'app\\storage\\repositories\\DomainRepositoryInterface' => __DIR__ . '/../..' . '/app/storage/repositories/DomainRepositoryInterface.php',
         'app\\storage\\repositories\\LoanRepository' => __DIR__ . '/../..' . '/app/storage/repositories/LoanRepository.php',
         'app\\storage\\repositories\\LoanRepositoryInterface' => __DIR__ . '/../..' . '/app/storage/repositories/LoanRepositoryInterface.php',
+        'app\\validators\\InvestValidatorInterface' => __DIR__ . '/../..' . '/app/validators/InvestValidatorInterface.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

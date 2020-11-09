@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'InvestValidator' => $baseDir . '/app/validators/InvestValidator.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
     'PHPUnit\\Framework\\AssertionFailedError' => $vendorDir . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
@@ -603,10 +604,15 @@ return array(
     'app\\entities\\Tranche\\TrancheInterface' => $baseDir . '/app/entities/Tranche/TrancheInterface.php',
     'app\\main\\Application' => $baseDir . '/app/main/Application.php',
     'app\\main\\ApplicationInterface' => $baseDir . '/app/main/ApplicationInterface.php',
+    'app\\services\\InvestCalculateService\\InvestCalculateServiceInterface' => $baseDir . '/app/services/InvestCalculateService/InvestCalculateServiceInterface.php',
+    'app\\services\\InvestCalculateService\\InvestCalculationService' => $baseDir . '/app/services/InvestCalculateService/InvestCalculationService.php',
+    'app\\services\\InvestService\\InvestService' => $baseDir . '/app/services/InvestService/InvestService.php',
+    'app\\services\\InvestService\\InvestServiceInterface' => $baseDir . '/app/services/InvestService/InvestServiceInterface.php',
     'app\\storage\\Storage' => $baseDir . '/app/storage/Storage.php',
     'app\\storage\\StorageInterface' => $baseDir . '/app/storage/StorageInterface.php',
     'app\\storage\\repositories\\DomainRepository' => $baseDir . '/app/storage/repositories/DomainRepository.php',
     'app\\storage\\repositories\\DomainRepositoryInterface' => $baseDir . '/app/storage/repositories/DomainRepositoryInterface.php',
     'app\\storage\\repositories\\LoanRepository' => $baseDir . '/app/storage/repositories/LoanRepository.php',
     'app\\storage\\repositories\\LoanRepositoryInterface' => $baseDir . '/app/storage/repositories/LoanRepositoryInterface.php',
+    'app\\validators\\InvestValidatorInterface' => $baseDir . '/app/validators/InvestValidatorInterface.php',
 );

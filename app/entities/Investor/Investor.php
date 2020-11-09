@@ -33,15 +33,15 @@ class Investor implements InvestorInterface
      */
     public function getName()
     {
-        // TODO: Implement getName() method.
+        return $this->name;
     }
 
     /**
-     * @return string
+     * @return void
      */
     public function setName($name)
     {
-        // TODO: Implement setName() method.
+        $this->name = $name;
     }
 
     /**
@@ -49,7 +49,7 @@ class Investor implements InvestorInterface
      */
     public function getInvestSum()
     {
-        // TODO: Implement getInvestSum() method.
+        return $this->investSum;
     }
 
     /**
@@ -58,7 +58,7 @@ class Investor implements InvestorInterface
      */
     public function setInvestSum($sum)
     {
-        // TODO: Implement setInvestSum() method.
+        $this->investSum = $sum;
     }
 
     /**
@@ -66,7 +66,7 @@ class Investor implements InvestorInterface
      */
     public function getInvestDate()
     {
-        // TODO: Implement getInvestDate() method.
+        return $this->investDate;
     }
 
     /**
@@ -75,6 +75,6 @@ class Investor implements InvestorInterface
      */
     public function setInvestDate($date)
     {
-        // TODO: Implement setInvestDate() method.
+        $this->investDate = $date;
     }
 }

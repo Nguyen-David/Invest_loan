@@ -14,7 +14,7 @@ interface InvestorInterface {
     public function getName();
 
     /**
-     * @return string
+     * @return void
      */
     public function setName($name);
 

@@ -4,28 +4,46 @@
 namespace app\commands;
 
 
-use app\entities\Loan\LoanInterface;
+use app\services\InvestCalculateService\InvestCalculateServiceInterface;
+use app\storage\repositories\LoanRepositoryInterface;
 
+/**
+ * Class CalculateInvestSumCommand
+ * @package app\commands
+ */
 class CalculateInvestSumCommand implements CommandInterface
 {
 
-    private $loan;
+    /**
+     * @var LoanRepositoryInterface
+     */
+    private $loanRepository;
 
-    public function __construct(LoanInterface $loan)
+    /**
+     * @var InvestCalculateServiceInterface
+     */
+    private $investCalculateService;
+
+    /**
+     * CalculateInvestSumCommand constructor.
+     * @param LoanRepositoryInterface $loanRepository
+     * @param InvestCalculateServiceInterface $investCalculateService
+     */
+    public function __construct(LoanRepositoryInterface $loanRepository, InvestCalculateServiceInterface $investCalculateService)
     {
-        $this->loan = $loan;
+        $this->loanRepository = $loanRepository;
+        $this->investCalculateService = $investCalculateService;
     }
 
     /**
      * @param array $parameters
-     * @return
+     * @return array
      */
     public function run(array $parameters)
     {
-        $tranche = $this->loan->getTranche($parameters['TrancheName']);
-        $investors = $tranche->getInvestors();
-        foreach ($investors as $investor){
-            $periodInvestments = 31 - (int) date("d",$investor->getInvestDate());
-        }
+        $loan = $this->loanRepository->find($parameters['loanId']);
+        $tranche = $loan->getTranche($parameters['TrancheName']);
+        $investorsEarn =  $this->investCalculateService->calculateInvest($loan,$tranche);
+        return $investorsEarn;
     }
 }

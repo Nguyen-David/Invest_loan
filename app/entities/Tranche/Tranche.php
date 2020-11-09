@@ -26,7 +26,7 @@ class Tranche implements TrancheInterface
     private $maxInvest;
 
     /**
-     * @var array
+     * @var InvestorInterface[]
      */
     private $investors;
 
@@ -108,6 +108,6 @@ class Tranche implements TrancheInterface
      */
     public function setInvestor(InvestorInterface $investor)
     {
-        $this->investors[$investor->getName()] = $investor->getInvestSum();
+        $this->investors[$investor->getName()] = $investor;
     }
 }

@@ -6,7 +6,9 @@ namespace app\commands;
 
 use app\entities\Investor\Investor;
 use app\entities\Loan\LoanInterface;
+use app\services\InvestService\InvestServiceInterface;
 use app\storage\repositories\LoanRepositoryInterface;
+use app\validators\InvestValidatorInterface;
 
 /**
  * Class InvestInTrancheCommand
@@ -20,27 +22,44 @@ class InvestInTrancheCommand implements CommandInterface
     private $loanRepository;
 
     /**
-     * InvestInTrancheCommand constructor.
-     * @param LoanRepositoryInterface $loan
+     * @var InvestValidatorInterface
      */
-    public function __construct(LoanRepositoryInterface $loan)
+    private $validator;
+
+    /**
+     * @var InvestServiceInterface
+     */
+    private $investService;
+
+    /**
+     * InvestInTrancheCommand constructor.
+     * @param LoanRepositoryInterface $loanRepository
+     * @param InvestValidatorInterface $validator
+     * @param InvestServiceInterface $investService
+     */
+    public function __construct(
+        LoanRepositoryInterface $loanRepository,
+        InvestValidatorInterface $validator,
+        InvestServiceInterface $investService
+    )
     {
-        $this->loanRepository = $loan;
+        $this->loanRepository = $loanRepository;
+        $this->validator = $validator;
+        $this->investService = $investService;
     }
 
     /**
      * @param array $parameters
-     * @return void
+     * @return bool
      * @throws \Exception
      */
     public function run(array $parameters)
     {
         $loan = $this->loanRepository->find($parameters['loanId']);
         $tranche = $loan->getTranche($parameters['TrancheName']);
-        if($tranche->getMaximumInvestAmount() < $parameters['investSum']) {
-            throw new \Exception('Invest sum more than available in the tranche');
+        if($this->validator->validate($tranche, $parameters['investSum'])){
+            $this->investService->invest($tranche, $parameters['name'], $parameters['investSum'], $parameters['investDate']);
         }
-        $tranche->setInvestor(new Investor($parameters['name'], $parameters['investSum'], $parameters['investDate']));
-        $tranche->setMaximumInvestAmount($tranche->getMaximumInvestAmount() - $parameters['investSum']);
+        return true;
     }
 }
