@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Investor/Investor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Investor/Investor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Investor/InvestorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Investor/InvestorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/container.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/container.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604741813529</updated>
-      <workItem from="1604741814652" duration="61708000" />
+      <workItem from="1604741814652" duration="62635000" />
     </task>
     <servers />
   </component>
