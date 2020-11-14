@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/dto/LoanPeriodDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/dto/TrancheDto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test-computools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-computools.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/CommandInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CommandInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main/ApplicationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/ApplicationInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Investor/Investor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Investor/Investor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Loan/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Loan/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +123,7 @@
       <updated>1604741813529</updated>
       <workItem from="1604741814652" duration="63443000" />
       <workItem from="1604937963626" duration="1646000" />
-      <workItem from="1605201166191" duration="7734000" />
+      <workItem from="1605201166191" duration="9842000" />
     </task>
     <servers />
   </component>

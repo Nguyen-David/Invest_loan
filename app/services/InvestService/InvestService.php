@@ -16,6 +16,7 @@ class InvestService implements InvestServiceInterface
      * @param $investSum
      * @param $investDate
      * @return mixed
+     * @throws \Exception
      */
     public function invest(TrancheInterface $tranche, $name, $investSum, $investDate)
     {

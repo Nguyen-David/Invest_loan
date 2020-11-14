@@ -21,11 +21,18 @@ class Investor implements InvestorInterface
      */
     private $investDate;
 
+    /**
+     * Investor constructor.
+     * @param $name
+     * @param $investSum
+     * @param $investDate
+     * @throws \Exception
+     */
     public function __construct($name,$investSum, $investDate)
     {
         $this->name = $name;
         $this->investSum = $investSum;
-        $this->investDate = $investDate;
+        $this->investDate = $this->validateDate($investDate);
     }
 
     /**
@@ -76,5 +83,18 @@ class Investor implements InvestorInterface
     public function setInvestDate($date)
     {
         $this->investDate = $date;
+    }
+
+    /**
+     * @param $date
+     * @return string
+     * @throws \Exception
+     */
+    private function validateDate($date)
+    {
+        if(!preg_match("/\d{2}(-|\/)\d{2}(-|\/)\d{4}/", $date)) {
+            throw new \Exception('Date format in Invest Day must be day/month/year or day-month-year, eg 01/01/2020');
+        }
+        return $date;
     }
 }
