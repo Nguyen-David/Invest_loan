@@ -6,6 +6,7 @@ namespace app\main;
 
 use app\commands\CommandInterface;
 use app\container\ContainerInterface;
+use app\dto\DtoInterface;
 
 /**
  * Class Application
@@ -26,11 +27,11 @@ class Application implements ApplicationInterface
 
     /**
      * @param CommandInterface $command
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return
      */
-    public function run(CommandInterface $command, array $parameters = [])
+    public function run(CommandInterface $command, DtoInterface $dto)
     {
-        return $command->run($parameters);
+        return $command->run($dto);
     }
 }

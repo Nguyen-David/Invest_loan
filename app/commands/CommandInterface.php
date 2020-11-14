@@ -2,14 +2,16 @@
 
 namespace app\commands;
 
+use app\dto\DtoInterface;
+
 /**
  * Interface CommandInterface
  * @package app\commands
  */
 interface CommandInterface {
     /**
-     * @param array $parameters
+     * @param $dto
      * @return
      */
-    public function run(array $parameters);
+    public function run(DtoInterface $dto);
 }

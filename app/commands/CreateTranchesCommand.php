@@ -4,6 +4,7 @@
 namespace app\commands;
 
 
+use app\dto\DtoInterface;
 use app\entities\Tranche\Tranche;
 use app\storage\repositories\LoanRepositoryInterface;
 
@@ -29,13 +30,13 @@ class CreateTranchesCommand implements CommandInterface
     }
 
     /**
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return void
      */
-    public function run(array $parameters)
+    public function run(DtoInterface $dto)
     {
-        $loan = $this->loanRepository->find($parameters['loanId']);
-        foreach ($parameters['tranches'] as $name => $parameter){
+        $loan = $this->loanRepository->find($dto->loanId);
+        foreach ($dto->tranches as $name => $parameter){
             $loan->setTranche(new Tranche($name,$parameter['monthPercentage'],$parameter['maxInvest']));
         }
         $this->loanRepository->save($loan);

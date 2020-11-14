@@ -51,14 +51,6 @@ class Tranche implements TrancheInterface
         return $this->name;
     }
 
-    /**
-     * @param $name
-     * @return void
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
 
     /**
      * @return int
@@ -68,14 +60,6 @@ class Tranche implements TrancheInterface
         return $this->monthPercentage;
     }
 
-    /**
-     * @param $monthPercentage
-     * @return void
-     */
-    public function setMonthPercentage($monthPercentage)
-    {
-        $this->monthPercentage = $monthPercentage;
-    }
 
     /**
      * @return double

@@ -3,6 +3,7 @@
 namespace app\main;
 
 use app\commands\CommandInterface;
+use app\dto\DtoInterface;
 
 /**
  * Interface ApplicationInterface
@@ -11,9 +12,9 @@ use app\commands\CommandInterface;
 interface ApplicationInterface {
     /**
      * @param CommandInterface $command
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return
      */
-    public function run(CommandInterface $command, array $parameters = []);
+    public function run(CommandInterface $command, DtoInterface $dto);
 
 }

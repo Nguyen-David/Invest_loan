@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/dto/LoanPeriodDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dto/TrancheDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test-computools.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test-computools.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/CommandInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CommandInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CreateTranchesCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/SetPeriodLoanCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/TrancheInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/Application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main/ApplicationInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/ApplicationInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +26,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -32,13 +47,47 @@
       <server host="test-computools" id="c7d2f9d4-e4e4-40a1-9140-acfc1d9a0c1c" name="test-computools" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP-7.3-x64" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP-7.3-x64">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+    </include_path>
+  </component>
   <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="localhost" />
   <component name="ProjectId" id="1jxNWRq0FHS8o6ujVKtTkenWGZl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../modules/php/PHP_7.3-x64/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
@@ -84,7 +133,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604741813529</updated>
-      <workItem from="1604741814652" duration="62635000" />
+      <workItem from="1604741814652" duration="63443000" />
+      <workItem from="1604937963626" duration="1646000" />
+      <workItem from="1605201166191" duration="7734000" />
     </task>
     <servers />
   </component>
@@ -96,7 +147,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

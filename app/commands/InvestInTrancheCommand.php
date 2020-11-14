@@ -4,6 +4,7 @@
 namespace app\commands;
 
 
+use app\dto\DtoInterface;
 use app\entities\Investor\Investor;
 use app\entities\Loan\LoanInterface;
 use app\services\InvestService\InvestServiceInterface;
@@ -49,16 +50,15 @@ class InvestInTrancheCommand implements CommandInterface
     }
 
     /**
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return bool
-     * @throws \Exception
      */
-    public function run(array $parameters)
+    public function run(DtoInterface $dto)
     {
-        $loan = $this->loanRepository->find($parameters['loanId']);
-        $tranche = $loan->getTranche($parameters['TrancheName']);
-        if($this->validator->validate($tranche, $parameters['investSum'])){
-            $this->investService->invest($tranche, $parameters['name'], $parameters['investSum'], $parameters['investDate']);
+        $loan = $this->loanRepository->find($dto->loanId);
+        $tranche = $loan->getTranche($dto->trancheName);
+        if($this->validator->validate($tranche, $dto->investSum)){
+            $this->investService->invest($tranche, $dto->investorName, $dto->investSum, $dto->investDate);
         }
         return true;
     }

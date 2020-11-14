@@ -4,6 +4,8 @@
 namespace app\commands;
 
 
+use app\dto\DtoInterface;
+use app\dto\LoanPeriodDto;
 use app\entities\Loan\Loan;
 use app\entities\Loan\LoanInterface;
 use app\storage\repositories\LoanRepositoryInterface;
@@ -29,12 +31,12 @@ class SetPeriodLoanCommand implements CommandInterface
     }
 
     /**
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return void
      */
-    public function run(array $parameters)
+    public function run(DtoInterface $dto)
     {
-        $loan = new Loan($parameters['startLoan'], $parameters['endLoan']);
+        $loan = new Loan($dto->startLoan, $dto->endLoan);
         $this->loanRepository->save($loan);
         return $loan->getId();
     }

@@ -4,6 +4,7 @@
 namespace app\commands;
 
 
+use app\dto\DtoInterface;
 use app\services\InvestCalculateService\InvestCalculateServiceInterface;
 use app\storage\repositories\LoanRepositoryInterface;
 
@@ -36,13 +37,13 @@ class CalculateInvestSumCommand implements CommandInterface
     }
 
     /**
-     * @param array $parameters
+     * @param DtoInterface $dto
      * @return array
      */
-    public function run(array $parameters)
+    public function run(DtoInterface $dto)
     {
-        $loan = $this->loanRepository->find($parameters['loanId']);
-        $tranche = $loan->getTranche($parameters['TrancheName']);
+        $loan = $this->loanRepository->find($dto->loanId);
+        $tranche = $loan->getTranche($dto->trancheName);
         $investorsEarn =  $this->investCalculateService->calculateInvest($loan,$tranche);
         return $investorsEarn;
     }

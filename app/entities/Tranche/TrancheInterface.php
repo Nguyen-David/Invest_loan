@@ -16,32 +16,14 @@ interface TrancheInterface {
     public function getName();
 
     /**
-     * @param $name
-     * @return void
-     */
-    public function setName($name);
-
-    /**
      * @return int
      */
     public function getMonthPercentage();
 
     /**
-     * @param $monthPercentage
-     * @return void
-     */
-    public function setMonthPercentage($monthPercentage);
-
-    /**
      * @return double
      */
     public function getMaximumInvestAmount();
-
-    /**
-     * @param $maxInvest
-     * @return void
-     */
-    public function setMaximumInvestAmount($maxInvest);
 
     /**
      * @return InvestorInterface[]
