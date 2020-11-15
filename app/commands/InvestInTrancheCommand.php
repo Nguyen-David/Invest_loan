@@ -5,11 +5,8 @@ namespace app\commands;
 
 
 use app\dto\DtoInterface;
-use app\entities\Investor\Investor;
-use app\entities\Loan\LoanInterface;
 use app\services\InvestService\InvestServiceInterface;
 use app\storage\repositories\LoanRepositoryInterface;
-use app\validators\InvestValidatorInterface;
 
 /**
  * Class InvestInTrancheCommand
@@ -23,11 +20,6 @@ class InvestInTrancheCommand implements CommandInterface
     private $loanRepository;
 
     /**
-     * @var InvestValidatorInterface
-     */
-    private $validator;
-
-    /**
      * @var InvestServiceInterface
      */
     private $investService;
@@ -35,17 +27,14 @@ class InvestInTrancheCommand implements CommandInterface
     /**
      * InvestInTrancheCommand constructor.
      * @param LoanRepositoryInterface $loanRepository
-     * @param InvestValidatorInterface $validator
      * @param InvestServiceInterface $investService
      */
     public function __construct(
         LoanRepositoryInterface $loanRepository,
-        InvestValidatorInterface $validator,
         InvestServiceInterface $investService
     )
     {
         $this->loanRepository = $loanRepository;
-        $this->validator = $validator;
         $this->investService = $investService;
     }
 
@@ -57,9 +46,8 @@ class InvestInTrancheCommand implements CommandInterface
     {
         $loan = $this->loanRepository->find($dto->loanId);
         $tranche = $loan->getTranche($dto->trancheName);
-        if($this->validator->validate($tranche, $dto->investSum)){
-            $this->investService->invest($tranche, $dto->investorName, $dto->investSum, $dto->investDate);
-        }
+        $this->investService->invest($tranche, $dto->investorName, $dto->investSum, $dto->investDate);
+
         return true;
     }
 }

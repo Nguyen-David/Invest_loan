@@ -70,12 +70,17 @@ class Tranche implements TrancheInterface
     }
 
     /**
-     * @param $maxInvest
+     * @param $investSum
      * @return void
+     * @throws \Exception
      */
-    public function setMaximumInvestAmount($maxInvest)
+    public function setMaximumInvestAmount($investSum)
     {
-        $this->maxInvest = $maxInvest;
+        if ($this->getMaximumInvestAmount() < $investSum){
+            throw new \Exception('Invest sum more than available in the tranche');
+        }
+        $availableMaxInvestSum = $this->getMaximumInvestAmount() - $investSum;
+        $this->maxInvest = $availableMaxInvestSum;
     }
 
     /**

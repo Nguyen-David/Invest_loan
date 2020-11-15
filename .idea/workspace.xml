@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
+    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="Add validation in Tranche entitie">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Investor/Investor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Investor/Investor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Loan/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Loan/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validators/InvestValidator.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/validators/InvestValidatorInterface.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -123,7 +125,7 @@
       <updated>1604741813529</updated>
       <workItem from="1604741814652" duration="63443000" />
       <workItem from="1604937963626" duration="1646000" />
-      <workItem from="1605201166191" duration="9842000" />
+      <workItem from="1605201166191" duration="12822000" />
     </task>
     <servers />
   </component>
@@ -142,5 +144,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add validation in Tranche entitie" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add validation in Tranche entitie" />
   </component>
 </project>

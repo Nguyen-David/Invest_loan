@@ -19,7 +19,6 @@ class MainTest extends TestCase
 {
     private $app;
     private $container;
-    private $LoanPeriodDto;
 
     public function testApp()
     {
