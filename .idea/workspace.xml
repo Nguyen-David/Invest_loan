@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="Add validation in Tranche entitie">
+    <list default="true" id="d6a4b1df-5e5c-4a31-a8e4-3e201b957fa0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/InvestInTrancheCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/entities/Tranche/Tranche.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/commands/CalculateInvestSumCommand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dto/TrancheNameDto.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dto/TrancheNameDto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/InvestCalculateService/InvestCalculateServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestCalculateService/InvestCalculateServiceInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/InvestCalculateService/InvestCalculationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestCalculateService/InvestCalculationService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestService/InvestService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validators/InvestValidator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/validators/InvestValidatorInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/InvestService/InvestServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/InvestService/InvestServiceInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/MainTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MainTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,12 +126,30 @@
       <updated>1604741813529</updated>
       <workItem from="1604741814652" duration="63443000" />
       <workItem from="1604937963626" duration="1646000" />
-      <workItem from="1605201166191" duration="12822000" />
+      <workItem from="1605201166191" duration="18395000" />
     </task>
+    <task id="LOCAL-00001" summary="Add validation in Tranche entity">
+      <created>1605470434025</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605470434025</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -147,6 +166,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add validation in Tranche entitie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add validation in Tranche entitie" />
+    <MESSAGE value="Add validation in Tranche entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add validation in Tranche entity" />
   </component>
 </project>

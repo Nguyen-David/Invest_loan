@@ -21,14 +21,28 @@ class TrancheNameDto implements DtoInterface
     public $trancheName;
 
     /**
+     * @var string
+     */
+    public $startPeriodCalculation;
+
+    /**
+     * @var string
+     */
+    public $endPeriodCalculation;
+
+    /**
      * TrancheNameDto constructor.
      * @param int $loanId
      * @param string $trancheName
+     * @param string $startPeriodCalculation
+     * @param string $endPeriodCalculation
      */
-    public function __construct(int $loanId,string $trancheName)
+    public function __construct(int $loanId,string $trancheName, string $startPeriodCalculation, string $endPeriodCalculation)
     {
         $this->loanId = $loanId;
         $this->trancheName = $trancheName;
+        $this->startPeriodCalculation = $startPeriodCalculation;
+        $this->endPeriodCalculation = $endPeriodCalculation;
     }
 
 }

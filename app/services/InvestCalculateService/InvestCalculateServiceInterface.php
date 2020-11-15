@@ -13,7 +13,9 @@ interface InvestCalculateServiceInterface {
     /**
      * @param LoanInterface $loan
      * @param TrancheInterface $tranche
+     * @param string $startPeriodCalculation
+     * @param string $endPeriodCalculation
      * @return mixed
      */
-    public function calculateInvest(LoanInterface $loan,TrancheInterface $tranche);
+    public function calculateInvest(LoanInterface $loan,TrancheInterface $tranche,string $startPeriodCalculation, string $endPeriodCalculation);
 }

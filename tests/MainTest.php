@@ -77,7 +77,7 @@ class MainTest extends TestCase
 
         $calculateInvestSum =  $this->container->get(CalculateInvestSumCommand::class);
 
-        $trancheNameADto = new TrancheNameDto($loanId, 'a');
+        $trancheNameADto = new TrancheNameDto($loanId, 'a', '01/11/2015', '31/10/2015');
 
         $investorsTrancheA = $this->app->run($calculateInvestSum, $trancheNameADto);
 
@@ -85,7 +85,7 @@ class MainTest extends TestCase
 
         $this->assertEquals(28.06, $investor1['sumEarn']);
 
-        $trancheNameBDto = new TrancheNameDto($loanId, 'b');
+        $trancheNameBDto = new TrancheNameDto($loanId, 'b','01/11/2015', '31/10/2015');
 
         $investorsTrancheB  = $this->app->run($calculateInvestSum, $trancheNameBDto);
 

@@ -44,7 +44,7 @@ class CalculateInvestSumCommand implements CommandInterface
     {
         $loan = $this->loanRepository->find($dto->loanId);
         $tranche = $loan->getTranche($dto->trancheName);
-        $investorsEarn =  $this->investCalculateService->calculateInvest($loan,$tranche);
+        $investorsEarn =  $this->investCalculateService->calculateInvest($loan,$tranche,$dto->startPeriodCalculation,$dto->endPeriodCalculation);
         return $investorsEarn;
     }
 }
